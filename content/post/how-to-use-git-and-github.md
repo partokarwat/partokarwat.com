@@ -141,7 +141,9 @@ Forking is a fair and better way to start an own work based on an existing repos
 | -------------- |-------------------------|
 | git clone link@website | Clone a repository |
 
-<img style="float: left;" src="media/pull-request.png">
+<div style="float: left">
+![Parto Karwat](/media/pull-request.png)
+</div>
 A **pull request** is a GitHub specific request to pull a branch into the master branch. If it is your repository and you got the pull request, then you can use the button *merge pull request* to complete.
 
 **Written with <span style="color:firebrick">&hearts;</span> in Kiel.**
