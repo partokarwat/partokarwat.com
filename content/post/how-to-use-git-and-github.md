@@ -2,7 +2,7 @@
 date = "2017-02-26T16:31:22+01:00"
 topics = ["Development"]
 tags = ["udacity","version control","git","github"]
-description = "This is a summary of the same spelling udacity course (https://www.udacity.com/course/how-to-use-git-and-github--ud775)."
+description = "This is my summary of the same spelling udacity course."
 title = "How to use Git and GitHub"
 
 +++
