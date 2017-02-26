@@ -1,0 +1,15 @@
+baseurl = "http://partokarwat.com/"
+title = "Parto Karwat"
+languageCode = "en-us"
+theme = "hyde"
+
+[params]
+  themeColor = "theme-base-08"
+  description = "Win out Over The Entropy"
+
+[author]
+  name = "Parto Karwat"
+
+[taxonomies]
+  tag = "tags"
+  topic = "topics"
