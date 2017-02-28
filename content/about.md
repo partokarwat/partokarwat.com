@@ -1,5 +1,5 @@
 +++
-date = "2017-02-01T20:07:08+01:00"
+date = "2017-02-01"
 topics = ["Private"]
 tags = []
 description = ""

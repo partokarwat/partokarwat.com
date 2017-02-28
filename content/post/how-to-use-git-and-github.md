@@ -1,5 +1,5 @@
 +++
-date = "2017-02-26T16:31:22+01:00"
+date = "2017-02-26"
 topics = ["Development"]
 tags = ["udacity","version control","git","github"]
 description = "This is my summary of the same spelling udacity course."
