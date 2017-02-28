@@ -1,6 +1,6 @@
 +++
 date = "2017-02-01"
-topics = ["Private"]
+topics = ["Personal"]
 tags = []
 description = ""
 title = "About Parto"
