@@ -1,0 +1,21 @@
+{{ partial "head.html" . }}
+<body class="{{ .Site.Params.themeColor }} {{if .Site.Params.layoutReverse}}layout-reverse{{end}}">
+
+{{ partial "sidebar.html" . }}
+
+<div class="content container">
+<section id="main">
+  <div >
+    {{ range .Data.Pages.GroupByDate "2006" }}
+      <h1 id="title">{{ .Key }}</h1>
+        {{ range .Pages }}
+            {{ .Render "summary"}}
+        {{ end }}
+    {{ end }}
+  </div>
+</section>
+
+</div>
+
+</body>
+</html>

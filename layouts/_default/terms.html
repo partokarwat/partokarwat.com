@@ -1,0 +1,22 @@
+{{ partial "head.html" . }}
+<body class="{{ .Site.Params.themeColor }} {{if .Site.Params.layoutReverse}}layout-reverse{{end}}">
+
+{{ partial "sidebar.html" . }}
+
+<div class="content container">
+<section id="main">
+  <div>
+   <h1 id="title">{{ .Title }}</h1>
+   {{ $data := .Data }}
+    {{ range $key,$value := .Data.Terms.ByCount }}
+    <h2><a href="{{ $data.Plural }}/{{ $value.Name | urlize }}"> {{ $value.Name }} </a> {{ $value.Count }} </h2>
+    {{ end }}
+  </div>
+</section>
+
+<aside id="meta"> </aside>
+
+</div>
+
+</body>
+</html>
