@@ -1,7 +1,7 @@
 +++
 date = "2017-02-01T20:07:08+01:00"
 topics = ["Private"]
-tags = ["about"]
+tags = []
 description = ""
 title = "About Parto"
 menu = "main"
