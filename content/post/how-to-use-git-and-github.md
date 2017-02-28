@@ -6,7 +6,7 @@ description = "This is my summary of the same spelling udacity course."
 title = "How to use Git and GitHub"
 
 +++
-This is my summary of the same spelling [udacity course] (https://www.udacity.com/course/how-to-use-git-and-github--ud775).
+You can find the corresponding udacity course [here] (https://www.udacity.com/course/how-to-use-git-and-github--ud775).
 
 # Command-line basics
 
