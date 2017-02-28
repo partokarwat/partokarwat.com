@@ -102,7 +102,7 @@ See also: #456, #789
 | git branch name-of-branch | Create branch |
 | git log --graph --oneline branchname1 branchname2 | Generate diagram = Show log of 2 branches graphically|
 
-Use always "-" instead of spaces in branch names.
+Use always ```-``` instead of spaces in branch names.
 
 Every commit (o) only knows his precursor (&larr;o&larr;o). Means that if one commit is lost, you will lose all the commits that have been before this one.
 
