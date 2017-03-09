@@ -168,11 +168,53 @@ Has 3 steps:
 1. ```Configuration``` Execute the build script and configure all the projects tasks
 1. ```Execution``` Execute the projects tasks
 
-*The best debugger is clear thought and print statements*
+*The best debugger is clear thought and print statements.*
 
 # Gradle for Java
+
+Use gradle plugins available for gradle instead of reinventing the wheel.
+
+Add the java plugin with ```apply plugin: "java"```. Find a quickstart guide [here](https://docs.gradle.org/current/userguide/tutorial_java_projects.html#gsc.tab=0).
+
+Create a JAR with the command ```gradle assemble``` and execute it with ```gradle execute```.
+
+Add repositories to your project by ```repository {...}```. Define dependencies on artifacts contained on your repositories. Ex.: ```dependencies { compile ... }```.
+
+Generate a dependency report with ```gradle dependencies```.
+
+**Identify version conflicts** with ```gradle dependencyInsight --dependency dependency-name``` what generates the dependency insight report.
+
+Create fancy file collections with custom configurations:
+```
+configurations {
+	custom
+}
+
+dependencies {
+	custom 'com.google.guava:guava:18.0'
+}
+```
+
+The scheme for archive names goes ```basename-appendix-version-classifier-extension```.
+
+*High quality software depends on rigorous testing.* That's why tests need to be automated. There exist two sorts of tests:
+
+- **Unit tests**: Test individual classes or methods in isolation.
+- **Integration tests**: Test your code in conjunction with some other systems, libraries or environements.
+
+Add test dependency by```testCompile 'junit:junit:4.12'```. 
+
+Execute tests with ```gradle test``` and get detailed test reports from the ```build/reports``` directory.
+
+Find Gradle Plugins on the [Gradle Plugin Portal](https://plugins.gradle.org/) or look at the [Standard Gradle plugins](https://docs.gradle.org/3.3/userguide/standard_plugins.html#gsc.tab=0).
+
+Set the Gradle version to use in the ```gradle-wrapper.properties``` file and always version control it.
+
+Generate the wrapper with ```gradle wrapper```.
 
 # Gradle for Android
 
 # Advanced Android Builds 
 
+
+**Written with <span style="color:firebrick">&hearts;</span> for Gradle in Kiel.**
