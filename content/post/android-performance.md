@@ -46,3 +46,5 @@ The 2 ways to remove overdraw:
 # Memory 
 
 # Battery
+
+**Written with <span style="color:orange">&#x263B;</span> in Kiel.**
