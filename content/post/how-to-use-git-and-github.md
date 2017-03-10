@@ -53,9 +53,9 @@ Run ```git status``` frequently!
 | git init | Make a repository out of a folder |
 | git add | Add files to staging area |
 | git commit -m "Message" | Bring files from staging area to the repository|
-| git diff --staged | Show diff between staging area and repository |
+| git diff \-\-staged | Show diff between staging area and repository |
 | git diff | Show delta between working directory and staging area |
-| git reset --hard | Delete all changes in working directory and staging area. Use carefully |
+| git reset \-\-hard | Delete all changes in working directory and staging area. Use carefully |
 
 ## Commit message structure
 
@@ -100,7 +100,7 @@ See also: #456, #789
 | -------------- |-------------------------|
 | git branch | Show all branches |
 | git branch name-of-branch | Create branch |
-| git log --graph --oneline branchname1 branchname2 | Generate diagram = Show log of 2 branches graphically|
+| git log \-\-graph \-\-oneline branchname1 branchname2 | Generate diagram = Show log of 2 branches graphically|
 
 Use always ```-``` instead of spaces in branch names.
 
@@ -115,7 +115,7 @@ Every commit (o) only knows his precursor (&larr;o&larr;o). Means that if one co
 
 | Command        | What does it?           |
 | -------------- |-------------------------|
-| git merge --abort | Restore file to state before start of merge |
+| git merge \-\-abort | Restore file to state before start of merge |
 | git merge coins | Merge branch coins into active branch |
 
 ```git merge master coins``` and ```git merge coins``` are equal if you are on master branch.
