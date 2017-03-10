@@ -38,6 +38,9 @@ Octopus = strategy Git uses to combine many different versions together.
 
 | Command        | What does it?           |
 | -------------- |-------------------------|
+| git log | Show the log of the current branch |
+| git log \-\-oneline | Show short log for the current branch |
+| git log \-\-stat | Show the log with changed files log |
 | git diff file1 file2 | Compare two versions of a file *line by line* |
 
  All file content in 1 line will always diff &rArr; **keep lines short!** (max. length of 80 - 120 characters)
