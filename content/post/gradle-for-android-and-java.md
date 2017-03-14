@@ -303,7 +303,7 @@ You can also obfuscate your code with proguard.
 
 # Special Topics
 
-Add [Gradle Versions Plugin](https://github.com/ben-manes/gradle-versions-plugin) to your project hold your non-google plugins versions up to date.
+Add [Gradle Versions Plugin](https://github.com/ben-manes/gradle-versions-plugin) to your project to hold your non-google plugins versions up to date.
 
 More videos on Gradle can be found on [Gradle's youtube channel](https://www.youtube.com/channel/UCvClhveoEjokKIuBAsSjEwQ).
 
