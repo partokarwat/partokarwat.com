@@ -8,6 +8,11 @@ title = "How to use Git and GitHub"
 +++
 You can find the corresponding udacity course [here] (https://www.udacity.com/course/how-to-use-git-and-github--ud775).
 
+# Table of Contents
+1. [Command-line basics](#command-line-basics)
+2. [Git](#git)
+2. [GitHub](#github)
+
 # Command-line basics
 
 | Command        | What does it?           | Did you know?  |

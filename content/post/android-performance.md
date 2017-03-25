@@ -8,6 +8,12 @@ title = "Android Performance"
 +++
 You can find the corresponding udacity course [here] (https://www.udacity.com/course/android-performance--ud825).
 
+# Table of Contents
+1. [Rendering performance](#rendering-performance)
+2. [Compute performance](#compute-performance)
+1. [Memory performance](#memory-performance)
+1. [Battery performance](#battery-performance)
+
 Why performance? Bad performance is the most common cause for bad reviews. Perf matters for usability and user exerience.
 
 # Rendering performance
@@ -41,10 +47,10 @@ The 2 ways to remove overdraw:
 - Eliminate unneeded backgrounds and drawables from views that won't contribute to the final rendered image
 - Define areas of your screen that you know will hide portions of your view
 
-# Compute
+# Compute performance
 
-# Memory 
+# Memory performance
 
-# Battery
+# Battery performance
 
 **Written with <span style="color:orange">&#x263B;</span> in Kiel.**

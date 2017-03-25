@@ -8,6 +8,12 @@ tags = ["udacity","android", "gradle", "java", "google"]
 +++
 You can find the corresponding udacity course [here] (https://www.udacity.com/course/gradle-for-android-and-java--ud867).
 
+# Table of Contents
+1. [Gradle Fundamentals](#gradle-Fundamentals)
+2. [Gradle for Java](#gradle-for-java)
+2. [Gradle for Android](#gradle-for-android)
+3. [Special Topics](#special-topics)
+
 # Gradle Fundamentals
 
 Why Gradle? Allow different app flavours like paid or free, debug and release. 
