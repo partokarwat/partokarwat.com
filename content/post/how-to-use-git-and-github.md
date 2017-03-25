@@ -139,7 +139,7 @@ Every commit (o) only knows his precursor (&larr;o&larr;o). Means that if one co
 | git branch -d coins | Delete branch "coins" |
 | git log -n 1 | Give the log a fix number of commits. Here 1 commit. |
 
-## GitHub
+# GitHub
 
 | Command        | What does it?           |
 | -------------- |-------------------------|
