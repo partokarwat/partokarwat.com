@@ -46,6 +46,8 @@ Octopus = strategy Git uses to combine many different versions together.
 | git log | Show the log of the current branch |
 | git log \-\-oneline | Show short log for the current branch |
 | git log \-\-stat | Show the log with changed files log |
+| git log \-p 4a60beb| Start to show changes at specific log |
+| git show 4a60beb| Show only one commit |
 | git diff file1 file2 | Compare two versions of a file *line by line* |
 
  All file content in 1 line will always diff &rArr; **keep lines short!** (max. length of 80 - 120 characters)
@@ -64,6 +66,9 @@ Run ```git status``` frequently!
 | git diff \-\-staged | Show diff between staging area and repository |
 | git diff | Show delta between working directory and staging area |
 | git reset \-\-hard | Delete all changes in working directory and staging area. Use carefully |
+| git tag \-a v1.0 a87984 | Create annotated tag at commit a87984. Always use annotated tags! |
+| git tag v1.0 | Create lightweight tag, that have no extra informations. |
+| git log \-\-decorate | Show log with tags |
 
 ## Commit message structure
 
@@ -109,6 +114,7 @@ See also: #456, #789
 | git branch | Show all branches |
 | git branch name-of-branch | Create branch |
 | git log \-\-graph \-\-oneline branchname1 branchname2 | Generate diagram = Show log of 2 branches graphically|
+|git log \-\-oneline \-\-decorate \-\-graph \-\-all| Show all branches and commits in the repository|
 
 Use always ```-``` instead of spaces in branch names.
 
