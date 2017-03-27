@@ -209,4 +209,80 @@ Store private primitve data in key-value pair with a SharedPreference.
 |                       | Database Test       |    URIMatcher Test |
 
 
-The Database Test is a write-read test on the database
+The Database Test is a write-read test on the database.
+
+Data Contract defines all tables with its columns.
+
+DBHelper extends SQLiteOpenHelper. DBHelper makes the database with a version number and a database filename.
+
+*Manually increment version numbers* each time you release an updated database with a new schema.
+
+```onCreate()``` creates the DB as SQL statement executed with ```.execSQL(..)```.
+
+Implement ```onUpgrade()``` method called, when version number has changed. Use ALTER TABLE or DROP TABLE
+
+## Content Provider
+
+Content Provider makes your data accessible without needing to know how you stored it. So it makes it easy to switch out the datasource.
+
+Widgets and Search need Content Provider. Ex.: GMail Widget, Play Store Search.
+
+SyncAdapter (Get Data from your Server) and CursorLoader (Get data from your Database) need Content Provider too.
+
+It also exists a SharedContentProvider.
+
+The Content Provider Implementationsteps:
+
+1. Determine URIs
+1. Update Contract
+1. Fill out URIMatcher
+1. Implement Funktions
+
+### Determine URIs
+| CONTENT://     | COM.EXAMPLE.ANDROID.SUNSHINE.APP/ |  WEATHER/  | 64111  |
+| --------------- |:-------------:| -----:| -----:|
+| SCHEME         | AUTHORITY       | LOCATION | QUERY  |
+|                | PACKAGE NAME    | DB TABLENAME | is optional!  |
+
+ContentObserver refreshes automatically with URI.
+
+- Base URIs = without Query, are for writing the DB.
+- Special URIs are for reading/quering the DB
+
+### Update Contract
+
+Add URIs to Contract and create corresponding methods. (??)
+
+### Fill out URIMatcher
+
+- \# a number
+- \* any string
+
+Implement URIMatcher in ContentProvider class
+
+Add the ContentProvider to the Manifest
+
+<pre><code>&lt;provider
+	android:authorities=[PACKAGENAME]
+	android:name=[CONTENT_PROVIDER_CLASS]
+/&gt;
+</code></pre>
+### Implement Funktions
+
+Implementation order:
+
+1. ```onCreate()```
+1. ```getType(Uri)```
+1. ```query(..)```
+1. ```insert(..)```, ```update(..)```, ```delete(..)``` 
+1. optional: ```bulkInsert(..)```
+
+```insert(..)```, ```update(..)```, ```delete(..)``` are the write operations
+
+### Content Resolver
+
+Access the data via Content Provider with Content Resolver.
+
+Use Content Provider for example in an async task:
+
+```Cursor myCursor = mContext.getContentResolver().query(..);```
