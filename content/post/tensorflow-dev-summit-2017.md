@@ -19,6 +19,7 @@ Feel free to visit the [projects webpage](https://www.tensorflow.org/).
 1. [TensorBoad](#tensorboad)
 1. [API](#api)
 1. [Uses](#uses)
+1. [Distributed TensorFlow](#distributed-tensorflow)
 
 # Introduction (Jeff Dean, Rajat Monga, Megan Kacholia)
 
@@ -163,4 +164,27 @@ Tensorflow increases APK by 12MB, but can be reduced by including only the ops t
 
 Allows to use multiple machines to use for one big model.
 
+Distributed is a TF mode.
+
+You can create Sessions and Servers.
+
+## TF Ecosystem (Jonathan Hseu)
+
+Integrate TF with your infrastructure.
+
+Run a cluster manager and a distributed storage.
+
+Only Python can be used for Training library.
+
+## TF Serving (Noah Fiedel)
+
+Share your models in production.
+
+Serving is how you apply a ML model after you've trained it.
+
+Most common way is a RPC Server. Like this the model can always be online and updated.
+
+## ML Toolkit (Ashish Agarwal)
+
+Have algorithms that work out of the box with ML Toolkit. Ex.: KMeans, GMMs,...
 
