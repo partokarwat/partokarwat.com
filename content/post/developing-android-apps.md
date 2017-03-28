@@ -2,7 +2,7 @@
 title = "Developing Android Apps"
 topics = ["Development"]
 date = "2017-02-19"
-tags = ["udacity","android"]
+tags = ["udacity","android", "google"]
 description = "This is my summary of the same spelling udacity course."
 
 +++
