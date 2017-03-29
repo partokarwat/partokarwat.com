@@ -39,6 +39,85 @@ Become a Google Cast Developer costs 5$ and can be accomplished in the [Google C
 
 *Cast isn't supported by the emulator!* Use a real Android and a real Cast device for development.
 
+Follow the [Google's visual design checklist](https://developers.google.com/cast/docs/design_checklist/). 
+
+Use Cast Companion Library (CCL).
+
+Provide start and stop control casts for users at any time. Always show playback controls when casting (ex. minicontroler or fullscreen). Even show playback controls, when the device is locked and over notifications while you app is out of focus. Also user should always be able to disconnect from the device.
+
+If multiple users are connected, only stop the actual cast when the last user disconnects.
+
+If the connection is lost, automatically reconnect users when they're in your app.
+
+If your app is killed, always try to rejoin the existing session, if it's still running.
+
+2 ways to start casting:
+
+- Connect and Play
+- Play and Connect
+
+The **Sender** always show the **action**. The **Receiver** always shows the **state**. Don't confuse your users! Think at remote control and TV.
+
+Fade your Receiver UI away after 5 seconds.
+
+## Receiver 
+
+They are written in HTML5 and JavaScript.
+
+Receivers get an URL generated from the Application ID by the chrome cast. The Sender sends the Application ID to the chrome cast.
+
+Types of receiver applications:
+
+- Default Media Receiver 
+ - without Application Id 
+ - for Simple Media
+ - no styling and customization possible
+- *Styled Media Receiver*
+ - with Application Id 
+ - for Simple Media
+ - hosted by google and designed for streaming audio and video content
+ - custom style with your own CSS
+ - Recommended option
+- Custom Receiver with
+ - Application Id for custom Media
+ - advanced capabilities like DRM
+ - have full control of all aspects of the behavior of your application
+
+## Sender 
+The sender's lifecycle:
+![Parto Karwat](/media/sender-lifecycle.png)
+
+1. Manifest
+ - minSdkVersion >= 9
+ - set the correct Application Theme
+ - Add ACCESS_NETWORK_STATE and ACCESS_WIFI_STATE in the production app
+1. menu.xml 
+ - Add the Cast button
+1. Activiy
+ - Initialize the Cast API in onCreate()
+ - Assign the the MediaRouteSeletor to MediaRouteActionProvider in onCreateOptionsMenu() 
+ - Add MediaRouterCallback to the MediaRouter instance in onStart()
+ - Remove MediaRouterCallback in onStop() to conserve battery power
+ - ...
+
+Example Cast API initialization:
+ ```
+ mMediaRouter = MediaRouter.getInstance(getApplicationContext());
+ mMediaRouteSelector = new MediaRouteSelector.Builder().addControlCategory(CastMediaControlIntent.categoryForCat("794B7BBF")).build();
+ mMediaRouterCallback = new MyMediaRouterCallback();
+ ```
+
+ Code for Cast button menu item:
+ ```
+ <item
+ 	android:id="@+id/media_route_menu_item"
+ 	android:title="Play on..."
+ 	app:actionProviderClass="android.support.v7.app.MediaRouteActionProvider"
+ 	app:showAsAction="always"/>
+```
+Again use CCL (Cast Companion Library)! 
+
+Try out a [cast codelab](http://cast-codelab.appspot.com/)! :)
 
 # Android TV
 
