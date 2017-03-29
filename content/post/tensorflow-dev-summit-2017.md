@@ -14,12 +14,14 @@ The TensorFlow Dev Summit 2017 took place at 9:30am Pacific Time on February 15t
 Feel free to visit the [projects webpage](https://www.tensorflow.org/).
 
 # Table of Contents
-1. [Introduction](#introduction)
-1. [XLA](#xla)
-1. [TensorBoad](#tensorboad)
-1. [API](#api)
-1. [Uses](#uses)
-1. [Distributed TensorFlow](#distributed-tensorflow)
+1. Introduction
+1. XLA
+1. TensorBoad
+1. API
+1. Uses
+1. Distributed TensorFlow
+1. Wide & Deep Learning
+1. Project Magenta
 
 # Introduction (Jeff Dean, Rajat Monga, Megan Kacholia)
 
@@ -188,3 +190,36 @@ Most common way is a RPC Server. Like this the model can always be online and up
 
 Have algorithms that work out of the box with ML Toolkit. Ex.: KMeans, GMMs,...
 
+## Sequence Models 
+
+Example is Google Translate.
+
+Sequence-to-sequence Models are 2 Neuronal networks: one at the left as Encoder, one at the right as Decoder, both connected by vectors.
+
+RNN is a unit of computation that you repeat over and over.
+
+There exist a bunch of libraries for RNNCells. NASCell is the newest.
+
+# Wide & Deep Learning (Hang-Tze Cheng)
+
+Example: App recommendation on google play
+
+Wide model is like a table. Deep model is more like points on a catesian coordinate system.
+
+Idea: Combine the power of wide and deep learning
+
+Configure the connection and it is made. For tutorial just google "Wide & Deep Learning".
+
+# Project Magenta (Douglas Eck)
+
+Magenta is a Project generating music and art using deep learning.
+
+Find the project in the github repository under ```tensorflow/magenta```.
+
+# TensoFlow in Medicine (Lily Peng)
+
+Example: Not enough ophthalmologists in india. 
+
+Solution: Let's train a model for retinography classification. 
+
+After a positive validation study, the bottleneck is for now the hardware.
