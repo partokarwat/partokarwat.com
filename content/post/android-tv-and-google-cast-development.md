@@ -121,3 +121,15 @@ Try out a [cast codelab](http://cast-codelab.appspot.com/)! :)
 
 # Android TV
 
+Use leanback library, it does the most.
+
+Use TV emulator, it's possible. :)
+
+In your manifest:
+
+- Add LEANBACK_LAUNCHER intent-filter to your Manifest within your TvActivity
+- Use Theme.Leanback for your TvActivity
+
+Use RecyclerView because of large list and limited memory on your Android TV.
+
+
