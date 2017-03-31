@@ -7,7 +7,7 @@ description = "This is my summary of the same spelling udacity course."
 
 +++
 
-You can find the corresponding course [at udacity] (https://www.udacity.com).
+You can find the corresponding course [at udacity] (https://www.udacity.com/course/new-android-fundamentals--ud851).
 
 # Table of Contents
 1. [Hard facts](#hard-facts)
@@ -36,11 +36,22 @@ App generation/deployment process:
 
 ![Parto Karwat](/media/app-generation-process.png)
 
-Use responsive design for Android Apps, because your app will run on many different devices with different screen sizes. Provide at least small phone, medium phone and tablet/large phone design.
+Use responsive design for Android Apps, because your app will run on many different devices with different screen sizes. Provide at least small phone, large phone, medium tablet and large tablet design.
 
 Have a mobile first policy. Mobile experience is the first consideration when building products. Most internet users come from mobile. Even children use mobiles not desktops to access the internet.
 
+The 4 types of components make off apps:
+
+- [Activity](#activity-lifecycle)
+- Service
+- [Content Provider](#content-provider)
+- Broadcast Receiver
+
 # Basics
+
+## Android Studio Hints
+
+Press shift 2x to access the search everywhere.
 
 ## Layouts
 
@@ -50,8 +61,18 @@ Layouts all extend from **ViewGroup**. All layouts are LayoutManagers (?).
 - RelativeLayout: Powerful layout with tons of possibilities. Layout elements relative to one another.
 - FrameLayout: Use if only 1 child view
 - GridLayout
+- ScrollView: ScrollView can have only one child
+- ConstraintLayout 
 
-ScrollView can have only one child.
+## Logging
+
+The existing log levels are:
+
+- error
+- warn
+- info
+- debug
+- verbose
 
 ## ListView
 1. Create visible items + 1 invisible above and underneath
