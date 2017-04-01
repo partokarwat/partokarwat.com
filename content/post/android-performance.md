@@ -2,7 +2,7 @@
 date = "2017-03-12"
 topics = ["Development"]
 tags = ["udacity","android", "google"]
-description = "This is my summary of the same spelling udacity course."
+description = "This is my summary of the same spelling udacity course"
 title = "Android Performance"
 
 +++

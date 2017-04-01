@@ -1,5 +1,5 @@
 +++
-description = "This is my summary of the same spelling udacity course."
+description = "This is my summary of the same spelling udacity course"
 title = "Gradle for Android and Java"
 date = "2017-03-05"
 topics = ["Development"]
