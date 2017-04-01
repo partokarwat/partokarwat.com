@@ -1,7 +1,7 @@
 +++
 topics = ["Development"]
 tags = ["udacity","android","google","maps"]
-description = "This is my summary of the same spelling udacity course."
+description = "This is my summary of the same spelling udacity course"
 date = "2017-04-09"
 title = "Add Google Maps to your Android App"
 
@@ -83,7 +83,7 @@ Allows you to change your map while the app is running.
 
 Use ```moveCamera()``` instantaniously move to a target. Use ```animateCamera()``` to go to a target with a fly over effect.
 
-## Markers
+# Markers
 
 ```
 MarkerOptions myPlace = new MarkerOptions()
@@ -91,7 +91,46 @@ MarkerOptions myPlace = new MarkerOptions()
 	.title("My Place")
 ```
 
-- ```position``` takes a LatLnh
+- ```position``` takes a LatLng
 - ```title``` takes a String
 
-## StreetView
+### Custom Markers
+
+Add icon property to MarkerOptions with ```.icon(BitmapDescriptionFactory.fromResource(R.drawable.ic_launcher));```
+
+## Polylines
+
+Creates a trace for all the LatLng you add to the Polyline with:
+
+```PolylineOptions().geodesic(true).add(LatLng);```
+
+Get to the initial one back at the end to get a Polygone.
+
+## Circles
+
+In ```onMapReady()``` add:
+
+<pre><code>m_map.addCircle(new CircleOptions()
+     .center(new LatLng(47.489805, -122.120502))
+     .radius(5000) // = 5 km
+     .strokeColor(Color.GREEN)
+     .fillColor(Color.argb(64,0,255,0)));
+</pre></code>
+
+# StreetView
+
+- setPosition
+- getLocation
+- getPanoramaCamera
+
+By default these 3 options are enabled, manage them with the following, if you like:
+
+- Street Names: isStreetNamesEnabled(), setStreetNamesEnabled(boolean)
+- Zoom Gestures: isZoomGesturesEnabled(), setZoomGesturesEnabled(boolean)
+- User Navigation: isUserNavigationEnabled(), setUserNavigationEnabled(boolean)
+
+User interaction:
+
+- Detect Camera changes: setOnStreetViewPanoramaCameraChangeListener
+- Detect User Touches on Panorama: setonStreetViewPanoramaClickListener
+- Detect changes to the Panorama: setOnStreetViewPanoramaChangeListener
