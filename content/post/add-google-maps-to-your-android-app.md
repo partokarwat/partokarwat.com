@@ -12,6 +12,8 @@ You can find the corresponding udacity course [here] (https://www.udacity.com/co
 # Table of Contents
 1. [Play services](#play-services)
 1. [Maps](#maps)
+1. [Markers](#markers)
+1. [StreetView](#streetView)
 
 # Play services
 
