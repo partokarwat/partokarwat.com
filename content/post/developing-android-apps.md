@@ -47,6 +47,8 @@ The 4 types of components make off apps:
 - [Content Provider](#content-provider)
 - Broadcast Receiver
 
+UI Thread needs 60 frames per second (FPS) < 17 ms computation time
+
 # Basics
 
 ## Android Studio Hints
@@ -220,6 +222,17 @@ Store private primitve data in key-value pair with a SharedPreference.
 - Include **menu items with semantic meaning**: Exit a session should be available by a menu item "logout", "sign-out" or similar.
 - Background apps shouldn't consume ressources.
 - Always prepare background apps to die.
+
+## AsyncTask
+
+4 steps:
+
+- onPreExecute()
+- doInBackground(Params...)
+- onProgressUpdate(Progress...)
+- onPostExecute(Result)
+
+execute(), onPreExecute(), onProgressUpdate() and onPostExecute() run on the main UI thread. onProgressUpdate() and doInBackground() run on a background thread.
 
 # Data Storage
 
