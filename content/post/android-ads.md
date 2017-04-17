@@ -3,7 +3,7 @@ title = "Monetize Your Android App with Ads"
 topics = ["Development"]
 tags = ["udacity","android","google","ads"]
 date = "2017-04-16"
-description = "This is my summary of the same spelling udacity course"
+description = "Earn money with your apps"
 
 +++
 

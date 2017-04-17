@@ -1,5 +1,5 @@
 +++
-description = "This is my summary for the second part of the Go Ubiquitous Lessons"
+description = "Deploy for Android TV and Google Cast"
 title = "Android TV and Google Cast development"
 date = "2017-04-02"
 topics = ["Development"]

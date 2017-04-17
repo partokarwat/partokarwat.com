@@ -1,7 +1,7 @@
 +++
 topics = ["Development"]
 tags = ["udacity","android","google","maps"]
-description = "This is my summary of the same spelling udacity course"
+description = "Discover the world with Google Maps"
 date = "2017-04-09"
 title = "Add Google Maps to your Android App"
 

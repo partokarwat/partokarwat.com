@@ -2,7 +2,7 @@
 date = "2017-03-19"
 topics = ["Development"]
 tags = ["udacity","android","wear", "ubiquitous"]
-description = "This is my summary for the first part of the Go Ubiquitous Lessons"
+description = "Start to go Go Ubiquitous"
 title = "Android Wear development"
 
 +++

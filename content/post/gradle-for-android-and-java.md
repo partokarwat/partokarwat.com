@@ -1,5 +1,5 @@
 +++
-description = "This is my summary of the same spelling udacity course"
+description = "Gain a deep understanding of Gradle"
 title = "Gradle for Android and Java"
 date = "2017-03-05"
 topics = ["Development"]

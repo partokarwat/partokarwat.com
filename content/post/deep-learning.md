@@ -3,7 +3,7 @@ date = "2017-04-30"
 tags = ["udacity","deep learning", "tensorflow", "google"]
 title = "Deep Learning"
 draft=true
-description = "This is my summary of the same spelling udacity course"
+description = "Introduce you to deep learning by google's experts"
 topics = ["Development"]
 
 +++

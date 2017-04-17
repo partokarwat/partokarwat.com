@@ -3,7 +3,7 @@ date = "2017-03-26"
 title = "TensorFlow Dev Summit 2017"
 topics = ["new technologie"]
 tags = ["google","artifical intelligence", "neuronal networks", "machine learning", "tensorflow"]
-description = "This are my notes for the TensorFlow Dev Summit 2017 Livestream"
+description = "Read a summary of the TensorFlow Dev Summit 2017 Livestream"
 
 +++
 
