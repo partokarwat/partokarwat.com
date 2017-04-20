@@ -166,5 +166,15 @@ Draw a virtual fence around a location in the real world and generate events whe
 - Games: Virtually hide loots.
 - Shop: Get notifications of special offers (like "Come in the next 5 minutes and you get your coffee for half price") if the user gets close to the store. Remove notification if user exists the geofence.
 
+## Properties
+
+Define a Geofence with the builder on the Geofence object and the following properties
+
+- Latitude and Longitude to defines the location
+- Radius: defines how close the user has to be
+- Expiration time: How long the Geofence will be alive, you can also create permanent once
+- ID: is unique
+
+Create a GeofencingRequest with addGeoFences holding an ArrayList of Geofences.
 
 
