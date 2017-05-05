@@ -40,6 +40,10 @@ Use responsive design for Android Apps, because your app will run on many differ
 
 Have a mobile first policy. Mobile experience is the first consideration when building products. Most internet users come from mobile. Even children use mobiles not desktops to access the internet.
 
+A good app should work like a good buttler: Giving you what you want before you even have to ask for it! NO Refresh-Button or Save-Button. Though using a Refresh-Button for debugging is allowed.
+
+The master-detail flow is one of the most used Android App patterns.
+
 The 4 types of components make off apps:
 
 - [Activity](#activity-lifecycle)
@@ -87,6 +91,13 @@ The existing log levels are:
 1. New list item comes into view: Udapte data in recycle bin before destroying invisible item
 
 <span style="color:green">++ Less memory overhead, less view management, smoother scrolling</span>
+
+### RecyclerView LayoutManagers
+
+- Linear: Scroll items either vertically or horizontally. Vertically is the default
+- Grid: Item are staggered in a Grid and can scroll either vertically or horizontally.
+- StaggeredGrid: Commonly used for views with content of varying dimensions.
+- Custom: Extend from LayoutManager and create your own.
 
 ## Adapter
 Knows how many list items are in the data set and how to build them. ListView asks the size of the data set and then asks what items to build. 
