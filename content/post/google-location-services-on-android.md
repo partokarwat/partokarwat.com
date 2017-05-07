@@ -7,7 +7,7 @@ tags = ["udacity","android","google","location services"]
 
 +++
 
-Please can find the corresponding udacity course [here] (https://www.udacity.com/course/google-location-services-on-android--ud876-1).
+Please find the corresponding udacity course [here] (https://www.udacity.com/course/google-location-services-on-android--ud876-1).
 
 # Table of Contents
 1. [Play services](#play-services)
