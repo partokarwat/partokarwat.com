@@ -222,10 +222,25 @@ Store private primitve data in key-value pair with a SharedPreference.
 - Visible Lifetime: Active &rarr; Paused &rarr; Stopped &rarr; Restored &rarr; Visible &rarr; Active
 - Screen rotation leeds to: onPause &rarr; onStop &rarr; onDestroy &rarr; onCreate &rarr; onStart &rarr; onResume 
 
-<span style="color:firebrick">&#x26a0; Save your app state in Bundle instance in onStop(). Like this it is guaranteed to be called before your app may be terminated by the runtime.</span> 
+<span style="color:firebrick">&#x26a0; Save your app state in Bundle instance within **onSaveInstanceState()**. Restore your app state in onCreate() if the Bundle is not null. Like this actions like rotating your device won't affect the user experience.</span> 
 
+- onStop is always the last method called before the app is killed (for example if it is running in the background an more resources are needed). Clean up any resources that need an ordinary tear down in onStop and onPause to make your app a good citizen! 
 - onSaveInstanceState is called before onPause
 - onRestoreInstanceState is called after onCreate
+
+### AsyncTaskLoader
+
+Use an AsyncTaskLoader for threads bound to an Activity rather than AsyncTask. 
+
+AsyncTaskLoader is a better choice for Activity-bound thread management, because it handles lifecycle changes correctly, delivering the result to the current active activity, preventing duplication of background threads, and helping to eliminate duplication of zombie activities.
+
+### Loaders
+
+Create one in 3 steps:
+
+1. Create a Loader ID
+1. Fill-in the Loader Callbacks
+1. Init the Loader with the LoaderManager
 
 ### Best practice
 
