@@ -12,6 +12,10 @@ You can find the corresponding course [at udacity] (https://www.udacity.com/cour
 # Table of Contents
 1. [Hard facts](#hard-facts)
 1. [Basics](#basics)
+1. [Intent Framework](#intent-framework)
+1. [Data Persistence in Android](#data-persistence-in-android)
+1. [Settings or Preferences](#settings-or-preferences)
+1. [Activity Lifecycle](#activity-lifecyle)
 1. [Data Storage](#data-storage)
 
 # Hard facts
@@ -102,26 +106,26 @@ The existing log levels are:
 ## Adapter
 Knows how many list items are in the data set and how to build them. ListView asks the size of the data set and then asks what items to build. 
 
-## Intents Framework
+# Intent Framework
 
 Intents are like envelopes:
 
 - explicit has exact adress on it with data inside
 - implicit has action on it with data inside
 
-### Explicit Intent
+## Explicit Intent
 
 > ```new Intent(context, DetailActivity.class)```
 
 Often used in ```startActiviy(intent)```
 
-### Implicit Intent
+## Implicit Intent
 
 > ```new Intent(Intent.ACTION_VIEW);```
 
 Possible actions to perform are VIEW, PICK, DIAL, MUSIC, CAMERA, ...
 
-#### Share Intent
+### Share Intent
 
 Is the most used implicit intent.
 
@@ -145,13 +149,13 @@ if(mShareActionProvider != null) {
 
 ```FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET``` prevents the activity we are sharing to run completely, when we press back, we come back to our app, not back in the shared app. 
 
-#### Broadcast Intents
+### Broadcast Intents
 
 Broadcast a message to many apps.
 
 Use ```sendBroadcast()```method to implement it.
 
-##### Broadcast Receiver
+#### Broadcast Receiver
 
 Broadcast Receiver best use in:
 
@@ -172,7 +176,7 @@ Ways to register your BroadcastReceiver:
 1. in Manifest: *triggered when app running and terminated*
 2. in Code/dynamically in Activity: triggered *only when app running*
 
-###### Manifest registration
+##### Manifest registration
 <pre><code>&lt;receiver
 	android:names=".MyReceiver"&gt;
 	&lt;intent-filter&gt;
@@ -183,7 +187,7 @@ Ways to register your BroadcastReceiver:
 
 Example: *GCM with Syncadapter*
 
-###### Dynamic registration
+##### Dynamic registration
 
 <pre><code>IntentFilter intentFilter = new IntentFilter("com.myapp.MEW_LIFEFORM");
 registerReceiver(myReceiver, intentFilter);
@@ -191,7 +195,7 @@ registerReceiver(myReceiver, intentFilter);
 
 Example: *Headphones unplugged/plugged change while hearing music*
 
-### Intent Filters
+## Intent Filters
 
 Define ```<intent-filter>``` for every Activity that should be launchable from an implicit intent. (In your manifest.xml)
 
@@ -201,20 +205,50 @@ Define ```<intent-filter>``` for every Activity that should be launchable from a
 &lt;/intent-filter&gt;
 </code></pre>
 
-## Settings
+# Data Persistence in Android
+
+Data Persistence is the act of saving some data to the phone.
+
+## Bundle
+
+Temporary store. Only use it if the user is actively using your app = **while the app is open**. *Example: onSaveInstanceState*
+
+The data is saved as a key-complexValue pair
+
+## SharedPreferences
+
+Saves Key-primitiveValue-Pairs to a **file** on the Android Filesystem. The data is persisted unless you install the app or break the preference file.
+
+## SQLite Database
+
+Organize more complicated text/numeric/boolean data. 
+
+## Internal/External Storage
+
+Save multimedia or large data files to the internal or external Storage. Internal Storage is on the phone. External storage can be an SD-Card or similar.
+
+## Server
+
+Servers are for data that multiple phones will access. The data can be persisted also when deleting the app or using a different phone. An example for a cloud service is Firebase.
+
+# Settings or Preferences
 
 Settings can always be added later. Less settings at the beginning are better.
 
-### Common Preferences 
+## PreferenceFragment
+
+
+
+## Common Preferences 
 - CheckBoxPreference
 - ListPreference
 - EditTextPreference
 
-### SharedPreferences
+## SharedPreferences
 
 Store private primitve data in key-value pair with a SharedPreference.
 
-## Activity Lifecycle
+# Activity Lifecycle
 
 ![Parto Karwat](/media/Android_Activity_LifeCyle.png)
 
@@ -228,13 +262,7 @@ Store private primitve data in key-value pair with a SharedPreference.
 - onSaveInstanceState is called before onPause
 - onRestoreInstanceState is called after onCreate
 
-### AsyncTaskLoader
-
-Use an AsyncTaskLoader for threads bound to an Activity rather than AsyncTask. 
-
-AsyncTaskLoader is a better choice for Activity-bound thread management, because it handles lifecycle changes correctly, delivering the result to the current active activity, preventing duplication of background threads, and helping to eliminate duplication of zombie activities.
-
-### Loaders
+## Loaders
 
 Create one in 3 steps:
 
@@ -242,7 +270,20 @@ Create one in 3 steps:
 1. Fill-in the Loader Callbacks
 1. Init the Loader with the LoaderManager
 
-### Best practice
+### AsyncTaskLoader
+
+Use an AsyncTaskLoader for threads bound to an Activity rather than AsyncTask. 
+
+AsyncTaskLoader is a better choice for Activity-bound thread management, because it handles lifecycle changes correctly, delivering the result to the current active activity, preventing duplication of background threads, and helping to eliminate duplication of zombie activities.
+
+The functions of AsyncTaskLoader:
+
+- onStartLoading
+- forceLoad: Force an asynchronous load
+- loadInBackground: Called on a worker thread to perform the actual load and to return the result of the load operation
+- deliverResult: Sends the result of the load to the registered listener
+
+## Best practice
 
 - **No Exit Menu item** in Android! Exit is the back button.
 - Include **menu items with semantic meaning**: Exit a session should be available by a menu item "logout", "sign-out" or similar.
