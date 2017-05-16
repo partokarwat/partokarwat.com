@@ -233,20 +233,65 @@ Servers are for data that multiple phones will access. The data can be persisted
 
 # Settings or Preferences
 
-Settings can always be added later. Less settings at the beginning are better.
+Settings can always be added later. Less settings at the beginning are better. 
+
+Generally the flow goes like this:
+
+1. User edits and updates a preference.
+1. *PreferenceChangeListener* triggered for that preference.
+1. The new value is saved to the *SharedPreference file*.
+1. *onSharedPreferenceChanged* listeners are triggered.
+
+Adding a setting is easier for the user than removing a setting. Removing a setting risk having a subset of users angry about the feature being taken away from them.
+
+## Should it be a setting?
+
+![Parto Karwat](/media/should-it-be-a-setting.png)
 
 ## PreferenceFragment
 
+Remark: PreferenceActivity is depricated since Honeycomb in favor of the more flexible fragment version!
 
+1. Add dependency ```compile 'com.android.support:preference-v7:25.1.0'```
+1. Create a SettingsFragment and extend it from PreferenceFragmentCompat.
+1. Create a new resource directory called ```xml``` and create preference resource files in it like for example ```pref_main.xml```
+1. Add```addPreferencesFromResource(R.xml.pref_main);``` to the onCreatePreferences() method
+1. Add to your AppTheme ```<item name="preferenceTheme">@style/PreferenceThemeOverlay</item>```
 
-## Common Preferences 
+### PreferenceScreen
+
+Is the root of a Preference hierarchy. It is the **container** that holds a couple of Preferences like CheckBoxPreference, ListPreference, etc. or even PreferenceScreens.
+
+### Common Preferences 
 - CheckBoxPreference
 - ListPreference
 - EditTextPreference
 
 ## SharedPreferences
 
-Store private primitve data in key-value pair with a SharedPreference.
+SharedPreferences describe the **file** where the preferences are stored. Store private primitve data in key-value pair with a SharedPreference.
+
+Read your SharedPreferences file with ```PreferenceManager.getDefaultSharedPreferences(this)```
+
+### SharedPreferences.Editor
+
+Write your SharedPreferences with the Editor. ```SharedPreferences.Editor editor = sharedPreferences.edit(); editor.putBoolean(KEY, value); editor.apply();```
+
+### onSharedPreferencesChangeListener
+
+1. Let the concerned Activity implement SharedPreferences.OnSharedPreferenceChangeListener
+1. Implement onSharedPreferenceChanged
+1. Register the listener in onCreate with ```sharedPreferences.registerOnSharedPreferenceChangeListener(this);```
+1. Unregister the listener in onDestroy with ```PreferenceManager.getDefaultSharedPreferences(this).unregisterOnSharedPreferenceChangeListener(this);```
+
+## PreferenceChangeListener
+
+Is triggered before a value is saved to the SharedPreferences file. Can prevent an invalid update to a preference.
+
+1. Implement the Preference.OnPreferenceChangeListener in your activity. ```implements Preference.OnPreferenceChangeListener```
+1. Attach the listener to the preference to listen from in onCreatePreferences with ```Preference preference = findPreference(getString(R.string.pref_name_key)); preference.setOnPreferenceChangeListener(this);```
+1. Implement onPreferenceChange()
+
 
 # Activity Lifecycle
 
