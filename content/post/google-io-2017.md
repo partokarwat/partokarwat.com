@@ -73,9 +73,35 @@ Google will have a job searching feature.
 
 ## Assisting the Driver: From Android Phones to Android Cars
 
+Android Auto app available for cars that don't have a build in navigation system.
+
+Audi Q8 integrates Android. (Talk by Alfons Pfaller with very limited english)
+
+Volvo is also partnering with Android. (Talk by Henrik Green)
+
 ## New release & device targeting tools or: how I learned to stop worrying & love Android diversity!
 
+Test your new app updates with Open Beta.
+
+Staged rollout is possible for new releases.
+
+You can now download older apk releases from the developer console.
+
+Release notes can be entered by copy&paste to developer console.
+
+The Release Dashboard from developer console allows you to compare against previous releases and analyze the state.
+
+New Device Catalog UI in the developer console.
+
 ## What's new in Google's IoT platform? Ubiquitous computing at Google
+
+IoT = Internet of Things
+
+IoT plattform from Google is Android Things and can be found [here](https://developer.android.com/things)
+
+You can build your own hardware boards with Android Things.
+
+Find an example of Android Things & TensorFlow [here](https://github.com/androidthings/sample-tensorflow-imageclassifier)
 
 ## What's New in Android
 
