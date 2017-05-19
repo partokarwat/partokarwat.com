@@ -99,11 +99,50 @@ IoT = Internet of Things
 
 IoT plattform from Google is Android Things and can be found [here](https://developer.android.com/things)
 
-You can build your own hardware boards with Android Things.
+You can build your own hardware boards with Android Things. Google Assistant SDK allows you to build custom machines.
 
 Find an example of Android Things & TensorFlow [here](https://github.com/androidthings/sample-tensorflow-imageclassifier)
 
 ## What's New in Android
+
+Picture in Picture can be set as flag in the manifest activity tag
+
+Color management with new utilities andorid.graphics.Color, ColorSpace, ColorLong, Half
+
+Multi-Display mode available for android with O. Test this feature with
+
+```
+$ adb shell dumpsys display
+$ adb shell start <activity> --display <id>
+```
+
+getMetrics() now available on any Media
+
+Playback has been improuved
+
+WebView has now Safe Browsing and a Multi-Process option
+
+Autofill
+
+Put font-files directly in ```res/font``` dirctory. Use them with "@font/myfont" or R.font.myfont. Fonts are downloadable with Front Provider in Google Play Services v11. This gives you access to over 800 Googlefonts.
+
+Auto-Sizing TextView will autoresize Text Size.
+
+Castaway for findViewById(). ```TextView tv = findViewById(R.id.mytextview);``` works now.
+
+Adaptive icons: give a background and a foreground, the system adapts then.
+
+Notification channels allow to block some notifications of an app. This O you have to use channels, if not your notifications will be dropped!
+
+Cached Data can be checked by getCacheQuotaBytes() and increased by allocateBytes()
+
+Java Programming Language Updates: java.time, java.nio.file, java.lang.invoke 
+
+EmojiCompat from SupportLibrary available
+
+Physics based animations are now available
+
+Alter windows has always to be type of TYPE_APPLICATION_OVERLAY
 
 ## What's New in Firebase
 
@@ -176,6 +215,8 @@ Find an example of Android Things & TensorFlow [here](https://github.com/android
 
 ## Using Design Sprints to increase cross-functional collaboration
 
+## Best practices to improve sign-in, payments, and forms in your apps
+
 ## Prototyping to Production: Bridging the Gap with a Common Tool
 
 ## Android meets TensorFlow: how to accelerate your app with AI
@@ -191,6 +232,8 @@ Find an example of Android Things & TensorFlow [here](https://github.com/android
 ## Machine Learning APIs by Example
 
 ## Exploring Google Maps Solutions
+
+## Introduction to Kotlin
 
 ## Understanding Color
 
@@ -209,6 +252,8 @@ Find an example of Android Things & TensorFlow [here](https://github.com/android
 ## From Research to Production with TensorFlow Serving
 
 ## Project Magenta: Music and Art with Machine Learning
+
+## Life is great and everything will be ok, Kotlin is here
 
 # 20th
 
