@@ -235,6 +235,26 @@ Alter windows has always to be type of TYPE_APPLICATION_OVERLAY
 
 ## Introduction to Kotlin
 
+Instances can be copied with default copy() function
+
+Semicolons are optional
+
+*when* block is like "case" in haskell. When can returned directly.
+
+higher order (functions take functions as arguments) available 
+
+Use *it* like in Groovy when you have a single parameter lambda expression
+
+*filter* function is build-in 
+
+green highlighting indicates smart cast. The casts are done by the compiler.
+
+Kotlin compiles to JVM-Bytecode.
+
+Kotlin allows multiplatform projects. 
+
+Coroutines are extremely cheap.
+
 ## Understanding Color
 
 ## How well do you know the web?
@@ -254,6 +274,26 @@ Alter windows has always to be type of TYPE_APPLICATION_OVERLAY
 ## Project Magenta: Music and Art with Machine Learning
 
 ## Life is great and everything will be ok, Kotlin is here
+
+MainActivity.ky Example
+
+``` 
+class MainActivity : Activity() {
+	override fun onCreate(savedInstanceState: Bundle?) {
+		super.onCreate(savedInstanceState)
+	}
+}
+```
+
+The kotlin typesystem models nullability
+
+Getter and Setter are implicitly available in kotlin
+
+Inline functions are possible, no anonymous classes needed
+
+Operator functions have a special call syntax
+
+Make db operations lazy
 
 # 20th
 
