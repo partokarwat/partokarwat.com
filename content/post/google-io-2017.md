@@ -71,6 +71,44 @@ Google will have a job searching feature.
 
 ## Developer Keynote
 
+First class support for Kotlin. Use as much Kotlin as you want from 0 to 100%.
+
+Languages are the tools we use to express our thoughts.
+
+Java 8 is supported now. You can also ignore Kotlin and use for example lambdas from Java 8.
+
+The team behind Kotlin is the same team that created intelliJ (JetBrains).
+
+The IDE convertes Java code to Kotlin if you paste java code in a .kt file.
+
+Live debugging. 
+
+No separate SDK Manager anymore, all is distributed via maven repositories.
+
+Instant Apps explore an App without installing it.
+
+Modularize Tool in Android Studio can help to devide your app in separated features, that can be used to provide an instant app version. It takes 4 to 6 weeks with the latest tools to build an instant app version of an existing app project.
+
+Use also Space-Saving Shared Libraries, Optimized Asset Delivery or On-The-Wire Compression to shrink your instant app.
+
+Finally publish your instant app version in the play console.
+
+App Directory from the Google Assistant.
+
+Custom shortcuts to start an app with the Google Assistant.
+
+Actions on Google Developer Console is a new developer console.
+
+TPU = Tensor Processing Unit
+
+TensorFlow Research Cloud registration can be found [here](https://g.co/tpusignup)
+
+Lighthouse is a chrome extention and can help analyze your website.
+
+Firebase has now cloud functions.
+
+Firebase Performance monitoring can help you to improuve your app in for example starting time. The beta version is available from today.
+
 ## Assisting the Driver: From Android Phones to Android Cars
 
 Android Auto app available for cars that don't have a build in navigation system.
