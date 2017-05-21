@@ -29,7 +29,7 @@ Training and Inference are the two pars of AI. Training is very costful. Google 
 
 For the new AI content has been created [google.ai](https://google.ai/). It provides Research, Tools an Applied AI.
 
-Learning to lean = train neuronal nets with neuronal nets
+Learning to learn = train neuronal nets with neuronal nets
 
 Other applications for ML with vision and AI can be pathology analysis or DNA Sequencing.
 
@@ -81,7 +81,7 @@ The team behind Kotlin is the same team that created intelliJ (JetBrains).
 
 The IDE convertes Java code to Kotlin if you paste java code in a .kt file.
 
-Live debugging. 
+Live debugging for network usage, cpu usage, ... 
 
 No separate SDK Manager anymore, all is distributed via maven repositories.
 
@@ -182,12 +182,40 @@ Physics based animations are now available
 
 Alter windows has always to be type of TYPE_APPLICATION_OVERLAY
 
-## What's New in Firebase
-
-
 # 18th
 
 ## No one likes crashing or janky apps! Engineer for high performance with tools from Android & Play
+
+App *stability and bugs* are for 50% the critic points on *1 star* app reviews. **5 star** reviews are 60% caused by **speed, design or usability**.
+
+Android vitals dashboard is your tool to get better reviews. Pay attention at the following critical performance points:
+
+- Stability
+ - ANR Rate (app not responding = frozen and no response for 5 seconds)
+ - Crash Rate
+- Battery
+ - Stuck Wake Logs (identify bad use of wake locks)
+ - Excessive Wakeups
+- Rendering
+ - Slow Rendering (60 frames per second = 1 frame every 16ms, if the rendering takes 17ms, 1 frame is dropped) 
+ - Frozen Frames (App appears frozen when rendering takes 700ms)
+
+Best practices:
+
+- Not do blocking operations in the UI thread, use for ex. AsyncTasks instead
+- Finish processing when you are a broadcast receiver
+- Be mindful when introducing deadlocks to your app
+- Use standard wake lock names for each distinct wake lock in your application in order for them to be debuggable in case they become stuck wake locks
+- Avoid using wake locks entirely. They were introducted in the early days of Android and since then many of the use cases for which you needed a wake lock, you no longer need a wake lock for. Examples: 
+ - Long running download, use Download Manager
+ - Synchronizing data with an external server, use Sync Adapter
+ - Need to run a background task, use Job Dispatcher
+ - You hold a wake lock so that you can process an intent before the device goes to sleep, use the new Job Intent Service fro Support Lib v26
+- If you eventhough nevertheless need a wake lock
+ - keep the logic around it very simple, any error in the logic can tead to them getting stuck
+ - try to do as little as possible where you are holding this wake lock
+ - use defensive error handling
+- Use Firebase JobDispatcher instead of Wakeups
 
 ## Architecture Components - Introduction
 
