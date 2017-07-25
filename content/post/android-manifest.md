@@ -9,8 +9,6 @@ tags = ["API Guides","android"]
 
 My resume is up to date for API 25 and based on [this](https://developer.android.com/guide/topics/manifest/manifest-intro.html) documentation.  
 
-# action
-
 # activity
 
 ### android:launchMode
@@ -24,51 +22,3 @@ Make Activity always the root of the activity stack. The device can only hold on
 
 - *singleTask* Allows other activities to be part of its task
 - *singleInstance* No other activities to be part of its task. If it starts another activity, that activity is assigned to a different task — as if ```FLAG_ACTIVITY_NEW_TASK``` was in the intent.
-
-# activity-alias
-
-# application
-
-# category
-
-# data
-
-# grant-uri-permission
-
-# instrumentation
-
-# intent-filter
-
-# manifest
-
-# meta-data
-
-# path-permission
-
-# permission
-
-# permission-group
-
-# permission-tree
-
-# provider
-
-# receiver
-
-# service
-
-# supports-gl-texture
-
-# supports-screens
-
-# uses-configuration
-
-# uses-feature
-
-# uses-library
-
-# uses-permission
-
-# uses-permission-sdk-23
-
-# uses-sdk

@@ -219,85 +219,15 @@ Best practices:
 
 ## Architecture Components - Introduction
 
-## Bringing Device Production to Everyone With Android Things
+Architecture Guide now available on developer.android.com
 
-## Getting Started with Machine Perception using the Mobile Vision API
+LifecycleOwner can be used by extending Activities from LifecycleActivity. LifecycleActivity is just a temporary class until these components reach 1.0 then everything in support library will implement this LifecycleOwner interface. Then use @OnLifecycleEvent(ON_START) void start(){}
 
-## Android Performance: An Overview
+LifecycleObserver
 
-## Background Check and other insights into the evolution of the Android Operating System Framework
-
-## ExoPlayer: Flexible media playback for Android
-
-## What's new for Android TV
-
-## Architecture Components - Solving the Lifecycle Problem
-
-## Building apps for the Google Assistant
-
-## Android Wear: What's new & Best Practices
-
-## Best Practices to slim down your app size
-
-## TensorFlow Frontiers
-
-## VR and AR at Google
-
-## What's new in Android Support Library
-
-## Fragment Tricks
-
-## Daydream in the classroom: immersive learning
-
-## Effective TensorFlow for Non-Experts
-
-## What's New in Android Development Tools
-
-## Developing for Android Things using Android Studio
-
-## Architecture Components - Persistence and Offline
-
-## Introduction to Android Instant Apps
-
-## Designing for the Next Billion Users: Accessibility UX Insights from the Developing World
-
-## Open Source TensorFlow Models
+You can extend your Listeners from LifeData<T> class 
 
 # 19th
-
-## What's new in Android Design Tools - New features and tools for rapid UI development
-
-## Using Google Cloud and TensorFlow on Android Things
-
-## Finding the Right Voice Interactions for your App
-
-## What's new in Notifications, Launcher Icons and Shortcuts
-
-## Home Automation with the Google Assistant
-
-## Making the world your own with Google Maps APIs
-
-## 10 Google Play Console secrets to optimize Android apps for stellar user retention
-
-## Using Design Sprints to increase cross-functional collaboration
-
-## Best practices to improve sign-in, payments, and forms in your apps
-
-## Prototyping to Production: Bridging the Gap with a Common Tool
-
-## Android meets TensorFlow: how to accelerate your app with AI
-
-## Best Practices for Android Audio
-
-## Pushing the boundaries of Machine Learning
-
-## How words can make your product stand out
-
-## Building for Your Next Billion Users
-
-## Machine Learning APIs by Example
-
-## Exploring Google Maps Solutions
 
 ## Introduction to Kotlin
 
@@ -321,24 +251,6 @@ Kotlin allows multiplatform projects.
 
 Coroutines are extremely cheap.
 
-## Understanding Color
-
-## How well do you know the web?
-
-## Notifications UX: What's New for Android O
-
-## Tools and tips to boost user engagement and retention
-
-## Android Sensors & Location: What's New & Best Practices
-
-## Android Performance: UI
-
-## Designing Great Apps for New Internet Users
-
-## From Research to Production with TensorFlow Serving
-
-## Project Magenta: Music and Art with Machine Learning
-
 ## Life is great and everything will be ok, Kotlin is here
 
 MainActivity.ky Example
@@ -360,8 +272,3 @@ Inline functions are possible, no anonymous classes needed
 Operator functions have a special call syntax
 
 Make db operations lazy
-
-# 20th
-
-## Android Wear UI development best practice
-
