@@ -5,7 +5,7 @@ theme = "hyde"
 
 [params]
   themeColor = "theme-base-0b"
-  description = "Win out Over The Entropy"
+  description = "developing Android Apps"
 
 [author]
   name = "Parto Karwat"
