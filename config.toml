@@ -4,7 +4,7 @@ languageCode = "en-us"
 theme = "hyde"
 
 [params]
-  themeColor = "theme-base-08"
+  themeColor = "theme-base-0b"
   description = "Win out Over The Entropy"
 
 [author]
