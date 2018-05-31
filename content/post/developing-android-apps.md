@@ -346,14 +346,13 @@ The functions of AsyncTaskLoader:
 
 execute(), onPreExecute(), onProgressUpdate() and onPostExecute() run on the main UI thread. onProgressUpdate() and doInBackground() run on a background thread.
 
-# Data Storage
+# Storing Data in SQLite
 
 |          |             |    |
-| ------------- |:-------------:| -----:|
-|                       | **DB Helper**       | **Content Provider** |
+| --------------------- |:-------------------:| -----------------------:|
+|                       | **DB Helper**       | **Content Provider**    |
 | **Data Contract**     | **SQLite Database** |   Content Provider Test |
-|                       | Database Test       |    URIMatcher Test |
-
+|                       | Database Test       |    URIMatcher Test      |
 
 The Database Test is a write-read test on the database.
 
@@ -366,6 +365,15 @@ DBHelper extends SQLiteOpenHelper. DBHelper makes the database with a version nu
 ```onCreate()``` creates the DB as SQL statement executed with ```.execSQL(..)```.
 
 Implement ```onUpgrade()``` method called, when version number has changed. Use ALTER TABLE or DROP TABLE
+
+## Database operations (CRUD)
+
+The following operations are available on any database and known by CRUD for
+
+- Create
+- Read
+- Update
+- Delete
 
 ## Content Provider
 
