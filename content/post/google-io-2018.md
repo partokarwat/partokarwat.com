@@ -142,6 +142,8 @@ Cloud Text-To-Speech is available. More in MLKit.
 
 Firebase Predictions feature available thanks to machine learning (ML Kit).
 
+**AR Core** allows to add AR to your App.
+
 ## Platforms and Tools
 
 Kotlin will be the language of choice for the long term. Already 35% of pro developers are using Kotlin. So, **learn** more **Kotlin**!
@@ -157,3 +159,32 @@ Emulator is now starting close to instant.
 Linux apps run on Chrome OS now.
 
 #  <a href="https://www.youtube.com/watch?v=eMHsnvhcf78&t=0s&list=PLOU2XLYxmsIInFRc3M44HUTQc3b_YJ4-Y&index=4" target="_blank">What's new in Android</a>
+
+- dynamic APKs
+- Google APIs
+- Android Jetpack: Android Test, Architecture Components (Room, ViewModel, LiveData, Lifecycles, Paging)
+- [android-ktx](https://github.com/android/android-ktx): Kotlin library
+- Slices are backwards compatible
+- Actions: Deeplinks as visible Intents
+
+Android Support Libraries are renamed to 'androidx.' to get off version numbers
+
+App in background has no more access to sensors like audio, camera or device rotation. The app needs to run a foreground service instead.
+
+Mockito can now mock final methods and soon static methods.
+
+Magnifier for easier text selection and cursor manipulation is now available.
+
+Location also indoor positioning with ```android.net.wifi.rtt.*```
+
+Use BiometicDialog for security checks by fingerprint.
+
+Display Cutout by setting the mode of ```android:windowLayoutInDisplayCutoutMode```
+
+Add smart reply UI to Notifications by ```RemoteInput.setChoices()```
+
+Deprecation Policy: New apps and app updates should target API 26.
+
+ImageDecoder can decode Bitmaps and Drawables, including AnimatedImageDrawable. You can decode multiple times from the same source.
+
+AR is integrated in the Emulator.
