@@ -7,7 +7,7 @@ title = "Google I/O 2017"
 
 +++
 
-The conference starts on May 17th and ends on May 20th 2017 (GMT+2). I join the conference via [live stream](https://events.google.com/io/live). 
+The conference starts on May 17th and ends on May 20th 2017 (GMT+2). I joined the conference via live stream. 
 
 # 17th
 
@@ -19,7 +19,7 @@ Mobile first to **AI first** approach. Deep learning is the base.
 
 Touch, voice and vision are the available inputs to computers.
 
-Image recognition has now a lower vision error rate than humans! Noisy pictures can made clear that humans can reduce their error rate too. Removing objects like fences from pictures is also possible. 
+Image recognition has now a lower vision error rate than humans! Noisy pictures can made clear that humans can reduce their error rate too. Removing objects like fences from pictures is also possible.
 
 Google Lens is a new product, that can understand what you're looking at and help you take action on it. Example: Point your phone camera on a flower and google lens can tell you what flower it is.
 
@@ -45,7 +45,7 @@ Android O release comes later this summer. In O double tap in text on address, p
 
 TensorFlow Lite available for Android.
 
-Vitals in O stand for security enhancements, os optimizations and developer tools: 
+Vitals in O stand for security enhancements, os optimizations and developer tools:
 
 - Apps upcomping to playstore are scanned with machine learing based algorithms. To make this more perceptible they created Google Play Protect.
 - Twice as fast boot time with O on Pixel
@@ -81,7 +81,7 @@ The team behind Kotlin is the same team that created intelliJ (JetBrains).
 
 The IDE convertes Java code to Kotlin if you paste java code in a .kt file.
 
-Live debugging for network usage, cpu usage, ... 
+Live debugging for network usage, cpu usage, ...
 
 No separate SDK Manager anymore, all is distributed via maven repositories.
 
@@ -174,7 +174,7 @@ Notification channels allow to block some notifications of an app. This O you ha
 
 Cached Data can be checked by getCacheQuotaBytes() and increased by allocateBytes()
 
-Java Programming Language Updates: java.time, java.nio.file, java.lang.invoke 
+Java Programming Language Updates: java.time, java.nio.file, java.lang.invoke
 
 EmojiCompat from SupportLibrary available
 
@@ -197,7 +197,7 @@ Android vitals dashboard is your tool to get better reviews. Pay attention at th
  - Stuck Wake Logs (identify bad use of wake locks)
  - Excessive Wakeups
 - Rendering
- - Slow Rendering (60 frames per second = 1 frame every 16ms, if the rendering takes 17ms, 1 frame is dropped) 
+ - Slow Rendering (60 frames per second = 1 frame every 16ms, if the rendering takes 17ms, 1 frame is dropped)
  - Frozen Frames (App appears frozen when rendering takes 700ms)
 
 Best practices:
@@ -206,7 +206,7 @@ Best practices:
 - Finish processing when you are a broadcast receiver
 - Be mindful when introducing deadlocks to your app
 - Use standard wake lock names for each distinct wake lock in your application in order for them to be debuggable in case they become stuck wake locks
-- Avoid using wake locks entirely. They were introducted in the early days of Android and since then many of the use cases for which you needed a wake lock, you no longer need a wake lock for. Examples: 
+- Avoid using wake locks entirely. They were introducted in the early days of Android and since then many of the use cases for which you needed a wake lock, you no longer need a wake lock for. Examples:
  - Long running download, use Download Manager
  - Synchronizing data with an external server, use Sync Adapter
  - Need to run a background task, use Job Dispatcher
@@ -225,7 +225,7 @@ LifecycleOwner can be used by extending Activities from LifecycleActivity. Lifec
 
 LifecycleObserver
 
-You can extend your Listeners from LifeData<T> class 
+You can extend your Listeners from LifeData<T> class
 
 # 19th
 
@@ -237,17 +237,17 @@ Semicolons are optional
 
 *when* block is like "case" in haskell. When can returned directly.
 
-higher order (functions take functions as arguments) available 
+higher order (functions take functions as arguments) available
 
 Use *it* like in Groovy when you have a single parameter lambda expression
 
-*filter* function is build-in 
+*filter* function is build-in
 
 green highlighting indicates smart cast. The casts are done by the compiler.
 
 Kotlin compiles to JVM-Bytecode.
 
-Kotlin allows multiplatform projects. 
+Kotlin allows multiplatform projects.
 
 Coroutines are extremely cheap.
 
@@ -255,7 +255,7 @@ Coroutines are extremely cheap.
 
 MainActivity.ky Example
 
-``` 
+```
 class MainActivity : Activity() {
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
